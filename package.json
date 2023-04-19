@@ -12,5 +12,13 @@
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.4"
   },
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domingodominic/algobytes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/domingodominic/algobytes/issues"
+  },
+  "homepage": "https://github.com/domingodominic/algobytes#readme"
 }

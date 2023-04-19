@@ -6,6 +6,10 @@
   font-family: poppins-black;
   src: url("./fonts/Poppins-Black.ttf");
 }
+@font-face {
+  font-family: poppins-thinI;
+  src: url("./fonts/Poppins-ThinItalic.ttf");
+}
 
 * {
   padding: 0px;
@@ -184,9 +188,21 @@ body {
   .heading {
     display: inline-block;
     font-family: poppins-black;
-    color: white;
+    color: #fe5657;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+    text-stroke: 1px rgb(255, 255, 255);
     border-bottom: 3px solid rgb(255, 255, 255);
     font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .lead {
+    font-size: 20px;
+    font-family: poppins-thinI;
+    font-weight: 400;
+    font-style: italic;
+    color: rgb(247, 247, 247);
+    font-weight: lighter;
+    line-height: 3rem;
   }
 }
 
@@ -225,7 +241,7 @@ body {
 
 @media (max-width: 400px) {
   .swiper {
-    height: 70svh;
+    height: 100svh;
     padding-top: 100px;
     bottom: 40px;
   }
@@ -262,58 +278,7 @@ body {
     transform: rotate(90deg);
   }
 }
-// html,
-// body {
-//   position: relative;
-// }
 
-// body {
-//   background: #eee;
-//   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-//   font-size: 14px;
-//   color: #000;
-//   margin: 0;
-//   padding: 0;
-// }
-
-// .swiper {
-//   width: 100%;
-//   height: 100%;
-// }
-
-// .swiper-slide {
-//   text-align: center;
-//   font-size: 18px;
-
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-
-//   img {
-//     width: 80%;
-//     border-radius: 20px;
-//     background: #e0e0e0;
-//     box-shadow: 9px 9px 18px #676767, -9px -9px 18px #ffffff;
-//   }
-// }
-// .swiper-button-prev,
-// .swiper-button-next {
-//   width: 10px;
-//   color: #5271ff;
-//   font-weight: bolder;
-// }
-
-// @media (max-width: 760px) {
-//   .swiper-button-next {
-//     right: 20px;
-//     transform: rotate(90deg);
-//   }
-
-//   .swiper-button-prev {
-//     left: 20px;
-//     transform: rotate(90deg);
-//   }
-// }
 //breakpoints
 
 //scroll to top
@@ -321,16 +286,11 @@ body {
 #scroll-to-top {
   display: none; /* Hide the button by default */
   position: fixed; /* Set the button to a fixed position */
-  font-size: 30px;
   background: none;
   border: none;
-  bottom: 30px; /* Set the position of the button from the bottom of the viewport */
-  right: 20px; /* Set the position of the button from the right of the viewport */
+  bottom: 50px; /* Set the position of the button from the bottom of the viewport */
+  right: 30px; /* Set the position of the button from the right of the viewport */
   z-index: 999; /* Set a high z-index to ensure the button is always on top */
-
-  i {
-    color: #5271ff;
-  }
 }
 
 /* Set the scroll behavior to smooth */
@@ -338,6 +298,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 1100px) {
+  .fact-techs {
+    height: auto;
+    padding-bottom: 100px;
+  }
+}
 @media (max-width: 900px) {
   header {
     nav {
@@ -357,6 +323,9 @@ html {
   }
   .logo img {
     width: 70%;
+  }
+  .fact-techs {
+    height: auto;
   }
 }
 

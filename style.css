@@ -1,11 +1,15 @@
 @charset "UTF-8";
 @font-face {
   font-family: poppins-regular;
-  src: url("/fonts/Poppins-Medium.ttf");
+  src: url("./fonts/Poppins-Medium.ttf");
 }
 @font-face {
   font-family: poppins-black;
-  src: url("fonts/Poppins-Black.ttf");
+  src: url("./fonts/Poppins-Black.ttf");
+}
+@font-face {
+  font-family: poppins-thinI;
+  src: url("./fonts/Poppins-ThinItalic.ttf");
 }
 * {
   padding: 0px;
@@ -51,11 +55,7 @@ header nav ul li a:hover::after {
   transition: all 0.5s;
   width: 100%;
 }
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-  margin-top: 60px;
-}
+
 .msgUs-btn {
   position: relative;
   margin-top: 10px;
@@ -162,17 +162,32 @@ body {
   box-shadow: 9px 9px 18px #676767, -9px -9px 18px #ffffff;
 }
 
-.about {
+#about {
   padding: 20px;
-  height: 60svh;
-  background: url("/image/aboutus-bg.png") no-repeat center center/cover;
+  height: auto;
+  overflow: hidden;
+  background-color: #5271ff;
+  z-index: 1;
+  background: url("") no-repeat center center/cover;
 }
-.about .heading {
+#about .heading {
   display: inline-block;
   font-family: poppins-black;
-  color: white;
+  color: #fe5657;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  text-stroke: 1px rgb(255, 255, 255);
   border-bottom: 3px solid rgb(255, 255, 255);
   font-weight: bold;
+  margin-bottom: 20px;
+}
+#about .lead {
+  font-size: 20px;
+  font-family: poppins-thinI;
+  font-weight: 400;
+  font-style: italic;
+  color: rgb(247, 247, 247);
+  font-weight: lighter;
+  line-height: 3rem;
 }
 
 @media (max-width: 767px) {
@@ -206,7 +221,7 @@ body {
 
 @media (max-width: 400px) {
   .swiper {
-    height: 70svh;
+    height: 100svh;
     padding-top: 100px;
     bottom: 40px;
   }
@@ -242,15 +257,11 @@ body {
 #scroll-to-top {
   display: none; /* Hide the button by default */
   position: fixed; /* Set the button to a fixed position */
-  font-size: 30px;
   background: none;
   border: none;
-  bottom: 30px; /* Set the position of the button from the bottom of the viewport */
-  right: 20px; /* Set the position of the button from the right of the viewport */
+  bottom: 50px; /* Set the position of the button from the bottom of the viewport */
+  right: 30px; /* Set the position of the button from the right of the viewport */
   z-index: 999; /* Set a high z-index to ensure the button is always on top */
-}
-#scroll-to-top i {
-  color: #5271ff;
 }
 
 /* Set the scroll behavior to smooth */
@@ -258,6 +269,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 1100px) {
+  .fact-techs {
+    height: auto;
+    padding-bottom: 100px;
+  }
+}
 @media (max-width: 900px) {
   header nav ul li a {
     font-size: 8px;
@@ -268,6 +285,9 @@ html {
   }
   .logo img {
     width: 70%;
+  }
+  .fact-techs {
+    height: auto;
   }
 }
 @media (max-width: 880px) {
