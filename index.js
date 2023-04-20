@@ -1,14 +1,3 @@
-const navList = document.querySelector(".nav-list");
-const checkbox = document
-  .getElementById("checkbox")
-  .addEventListener("click", function () {
-    if (checkbox.checked == true) {
-      navList.style.display = "block";
-    } else if (checkbox.checked == false) {
-      navList.style.display = "none";
-    }
-  });
-
 const scrollToTopButton = document.getElementById("scroll-to-top");
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > 0) {

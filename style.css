@@ -18,44 +18,6 @@
   font-family: poppins-regular;
 }
 
-header {
-  position: relative;
-  margin: 10px 40px 10px 30px;
-  display: flex;
-  justify-content: space-between;
-}
-header nav {
-  margin: 0 auto;
-}
-header nav ul {
-  display: flex;
-  margin-top: 10px;
-}
-header nav ul li {
-  list-style: none;
-}
-header nav ul li a {
-  position: relative;
-  text-decoration: none;
-  margin-left: 40px;
-  font-size: 10px;
-  font-weight: bolder;
-  color: black;
-}
-header nav ul li a::after {
-  content: "";
-  position: absolute;
-  background-color: #5271ff;
-  width: 0%;
-  height: 2px;
-  left: 0;
-  top: 20px;
-}
-header nav ul li a:hover::after {
-  transition: all 0.5s;
-  width: 100%;
-}
-
 .msgUs-btn {
   position: relative;
   margin-top: 10px;
@@ -145,7 +107,7 @@ body {
 }
 
 .swiper {
-  width: 100%;
+  width: 80%;
   background-color: #ececec;
   z-index: 0;
 }
@@ -157,9 +119,14 @@ body {
   align-items: center;
 }
 .swiper-slide img {
-  width: 80%;
+  width: 90%;
   border-radius: 20px;
   box-shadow: 9px 9px 18px #676767, -9px -9px 18px #ffffff;
+}
+
+.swiper-button-prev {
+  position: absolute;
+  right: 190px;
 }
 
 #about {
@@ -187,6 +154,21 @@ body {
   line-height: 3rem;
 }
 
+#scroll-to-top {
+  display: none; /* Hide the button by default */
+  position: fixed; /* Set the button to a fixed position */
+  background: none;
+  border: none;
+  bottom: 50px; /* Set the position of the button from the bottom of the viewport */
+  right: 30px; /* Set the position of the button from the right of the viewport */
+  z-index: 999; /* Set a high z-index to ensure the button is always on top */
+}
+
+/* Set the scroll behavior to smooth */
+html {
+  scroll-behavior: smooth;
+}
+
 .singup {
   color: #5271ff;
   text-transform: uppercase;
@@ -209,91 +191,6 @@ body {
   padding: 50px;
   border-radius: 8px;
 }
-footer .footer-item h4 {
-  font-size: 18px;
-  font-weight: 700;
-  color: #2a2a2a;
-  margin-bottom: 30px;
-}
-footer .footer-item ul li a {
-    font-size: 15px;
-    color: #afafaf;
-    transition: all .3s;  
-}
-
-
-footer .about ul {
-    margin-top: 20px;
-    
-}
-.chat-container {
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-  margin-top: 20px;
-  overflow: hidden;
-}
-
-.chat-header {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px;
-}
-
-.chat-header h3 {
-  margin: 0;
-}
-
-.chat-body {
-  height: 300px;
-  overflow-y: scroll;
-}
-
-.chat-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.chat-message {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
-}
-
-.chat-message-content {
-  background-color: #fff;
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  margin-left: 10px;
-  max-width: 70%;
-}
-
-.chat-avatar img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.chat-footer {
-  padding: 10px;
-  background-color: #f9f9f9;
-}
-
-.chat-footer form {
-  display: flex;
-}
-
-.chat-footer input {
-  flex-grow: 1;
-  margin-right: 10px;
-}
-
-.chat-footer button {
-  width: 100px;
-}
-
 
 .inputBox,
 .inputBox1 {
@@ -363,7 +260,29 @@ footer .about ul {
   border-radius: 8px;
 }
 
-button {
+.inputBox #form-text:focus {
+  border: 2px solid #5271ff;
+}
+
+.inputBox #form-text:focus ~ span {
+  transform: translateX(156px) translateY(-15px);
+  font-size: 0.8em;
+  padding: 5px 10px;
+  background: #5271ff;
+  letter-spacing: 0.2em;
+  color: #fff;
+  border: 2px;
+}
+
+#form-text {
+  border: 2px solid #5271ff;
+  border-top: none;
+  border-right: none;
+}
+
+.btn-form {
+  position: relative;
+  margin-top: 30px;
   font-family: inherit;
   font-size: 20px;
   background: #5271ff;
@@ -378,31 +297,31 @@ button {
   transition: all 0.2s;
 }
 
-button span {
+.btn-form span {
   display: block;
   margin-left: 0.3em;
   transition: all 0.3s ease-in-out;
 }
 
-button svg {
+.btn-form svg {
   display: block;
   transform-origin: center center;
   transition: transform 0.3s ease-in-out;
 }
 
-button:hover .svg-wrapper {
+.btn-form:hover .svg-wrapper {
   animation: fly-1 0.6s ease-in-out infinite alternate;
 }
 
-button:hover svg {
+.btn-form:hover svg {
   transform: translateX(1.2em) rotate(45deg) scale(1.1);
 }
 
-button:hover span {
+.btn-form:hover span {
   transform: translateX(5em);
 }
 
-button:active {
+.btn-form:active {
   transform: scale(0.95);
 }
 
@@ -414,78 +333,6 @@ button:active {
     transform: translateY(-0.1em);
   }
 }
-.toggle {
-  display: none;
-  position: absolute;
-  right: 0;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  transition-duration: 0.5s;
-}
-
-.bars {
-  width: 100%;
-  height: 4px;
-  background-color: rgb(176, 92, 255);
-  border-radius: 4px;
-}
-
-#bar2 {
-  transition-duration: 0.8s;
-}
-
-#bar1,
-#bar3 {
-  width: 70%;
-}
-
-#checkbox:checked + .toggle .bars {
-  position: absolute;
-  transition-duration: 0.5s;
-}
-
-#checkbox:checked + .toggle #bar2 {
-  transform: scaleX(0);
-  transition-duration: 0.5s;
-}
-
-#checkbox:checked + .toggle #bar1 {
-  width: 100%;
-  transform: rotate(45deg);
-  transition-duration: 0.5s;
-}
-
-#checkbox:checked + .toggle #bar3 {
-  width: 100%;
-  transform: rotate(-45deg);
-  transition-duration: 0.5s;
-}
-
-#checkbox:checked + .toggle {
-  transition-duration: 0.5s;
-  transform: rotate(180deg);
-}
-
-#scroll-to-top {
-  display: none; /* Hide the button by default */
-  position: fixed; /* Set the button to a fixed position */
-  background: none;
-  border: none;
-  bottom: 50px; /* Set the position of the button from the bottom of the viewport */
-  right: 30px; /* Set the position of the button from the right of the viewport */
-  z-index: 999; /* Set a high z-index to ensure the button is always on top */
-}
-
-/* Set the scroll behavior to smooth */
-html {
-  scroll-behavior: smooth;
-}
-
 @media (max-width: 767px) {
   .algoBytes {
     font-size: 30px;
@@ -497,20 +344,30 @@ html {
     visibility: hidden;
   }
   nav {
-    position: absolute;
-    display: none;
-    top: 100px;
-    right: -100px;
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    transition: all 0.5s;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
     z-index: 1;
   }
   nav ul {
     display: block !important;
+    padding: 0;
+    width: 30svh;
+    height: 100svh;
+    text-align: center;
   }
   nav ul li {
     line-height: 5rem;
   }
   nav ul li a {
+    color: #5271ff !important;
+    font-size: 20px !important;
     margin: 0 !important;
+    text-align: center;
   }
   .home-col-1 {
     text-align: center;
@@ -527,7 +384,12 @@ html {
     margin-top: 0px !important;
   }
   .toggle {
+    position: fixed !important;
     display: flex !important;
+    margin: 20px;
+  }
+  #checkbox:checked + .toggle ~ header .myNav {
+    right: 0% !important;
   }
 }
 @media (max-width: 400px) {
@@ -597,6 +459,112 @@ html {
     line-height: 3rem;
   }
 }
+header {
+  position: relative;
+  margin: 10px 40px 10px 30px;
+  display: flex;
+  justify-content: space-between;
+}
+header nav {
+  margin: 0 auto;
+}
+header nav ul {
+  display: flex;
+  margin-top: 10px;
+}
+header nav ul li {
+  list-style: none;
+}
+header nav ul li a {
+  position: relative;
+  text-decoration: none;
+  margin-left: 40px;
+  font-size: 10px;
+  font-weight: bolder;
+  color: black;
+}
+header nav ul li a::after {
+  content: "";
+  position: absolute;
+  background-color: #5271ff;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  top: 20px;
+}
+header nav ul li a:hover::after {
+  transition: all 0.5s;
+  width: 100%;
+}
+
+input[type=checkbox] {
+  position: absolute;
+  right: 0;
+  display: none;
+}
+
+/* Change background color when checkbox is checked */
+#checkbox:checked + .toggle ~ header nav {
+  right: 0;
+}
+
+.toggle {
+  position: relative;
+  display: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  right: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: 0.5s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: #5271ff;
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: 0.8s;
+}
+
+#bar1,
+#bar3 {
+  width: 70%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -1878,10 +1846,6 @@ progress {
   .col-lg-5 {
     flex: 0 0 auto;
     width: 41.66666667%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
   }
   .col-lg-6 {
     flex: 0 0 auto;
@@ -1910,7 +1874,6 @@ progress {
   .col-lg-12 {
     flex: 0 0 auto;
     width: 100%;
-    text-align: center;
   }
   .offset-lg-0 {
     margin-left: 0;
