@@ -79,23 +79,6 @@
   }
 }
 
-//fact techs section
-.fact-techs {
-  height: 70svh;
-  background-color: #ececec;
-}
-
-.algoBytes {
-  position: relative;
-  background-color: #ececec;
-  font-family: poppins-black;
-
-  text-align: Center;
-  font-size: 50px;
-  font-weight: bolder;
-  color: #5271ff;
-  opacity: 0.5;
-}
 html,
 body {
   position: relative;
@@ -109,30 +92,6 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
-}
-
-.swiper {
-  width: 80%;
-  background-color: #ececec;
-
-  z-index: 0;
-}
-
-.swiper-slide {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  img {
-    width: 90%;
-    border-radius: 20px;
-    box-shadow: 9px 9px 18px #676767, -9px -9px 18px #ffffff;
-  }
-}
-.swiper-button-prev {
-  position: absolute;
-  right: 190px;
 }
 
 //about--us--section
@@ -180,7 +139,8 @@ body {
 html {
   scroll-behavior: smooth;
 }
-
+@import "./carousels.scss";
+@import "./carousel.scss";
 @import "./form.scss";
 @import "./mediaQueries.scss";
 @import "./navbar.scss";
