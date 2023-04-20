@@ -130,6 +130,26 @@ html {
   scroll-behavior: smooth;
 }
 
+[data-aos^=zoom][data-aos^=zoom].aos-animate {
+  opacity: 0.5 !important;
+}
+
+.fact-techs {
+  height: 70svh;
+  background-color: #ececec;
+}
+
+.algoBytes {
+  position: relative;
+  background-color: #ececec;
+  font-family: poppins-black;
+  text-align: Center;
+  font-size: 50px;
+  font-weight: bolder;
+  color: #5271ff;
+  opacity: 0.5;
+}
+
 html,
 body {
   position: relative;

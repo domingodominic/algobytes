@@ -139,6 +139,11 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+[data-aos^="zoom"][data-aos^="zoom"].aos-animate {
+  opacity: 0.5 !important;
+}
+@import "./blogs.scss";
 @import "./carousels.scss";
 @import "./carousel.scss";
 @import "./form.scss";

@@ -14,3 +14,5 @@ scrollToTopButton.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+AOS.init();
