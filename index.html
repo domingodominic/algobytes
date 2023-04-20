@@ -15,10 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css" />
     <title>AlgoBytes</title>
     <style></style>
@@ -40,11 +37,11 @@
       </div>
       <nav class="myNav">
         <ul class="nav-list">
-          <li><a href="#" style="margin: 0px">HOME</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="#">BLOGS</a></li>
+          <li><a href="#home" style="margin: 0px">HOME</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#facts">BLOGS</a></li>
           <li><a href="#">SERVICES</a></li>
-          <li><a href="#" style="margin-right: 25px">CONTACTS</a></li>
+          <li><a href="#contact" style="margin-right: 25px">CONTACTS</a></li>
         </ul>
       </nav>
     
@@ -55,7 +52,7 @@
     </header>
 
     <!-- home section -->
-    <div class="container-fluid home-section mt-3">
+    <div class="container-fluid home-section mt-3" id="home">
       <div class="row g-1">
         <div
           class="col-12 col-sm-12 col-md-6 col-lg-6 col-sm-12 p-5 home-col-1"
@@ -109,7 +106,77 @@
           >TECHS</span
         >
       </p>
-      <div class="swiper">
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/1.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/2.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/3.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/4.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/5.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/6.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/7.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/8.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/9.jpg" />
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    
+<!-- 
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="images/1.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/2.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/3.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/4.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/5.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/6.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/7.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/8.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="images/9.jpg" alt="" />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div> -->
+
+      <!-- <div class="swiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img src="images/1.jpg" alt="" />
@@ -141,7 +208,7 @@
        
         </div>
         <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-prev"></div> -->
       
         <div class="arrow mt-5" style="text-align: center; cursor: pointer">
           <a href="#about">
@@ -382,11 +449,50 @@
     </div>
   </div>
 
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
-  
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
+  <!-- Initialize Swiper -->
     <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+  <!-- <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+   -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
     <script>
       var swiper = new Swiper(".swiper", {
         slidesPerView: 3,
@@ -408,7 +514,7 @@
 
         return direction;
       }
-    </script>
+    </script> -->
     <script src="index.js"></script>
     <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

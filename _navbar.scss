@@ -6,6 +6,7 @@ header {
 
   nav {
     margin: 0 auto;
+    z-index: 99;
     ul {
       display: flex;
       margin-top: 10px;
@@ -58,6 +59,8 @@ input[type="checkbox"] {
   width: 40px;
   height: 40px;
   cursor: pointer;
+  margin-left: 10px;
+  z-index: 99;
 
   right: 0;
   flex-direction: column;
