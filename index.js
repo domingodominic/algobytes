@@ -1,3 +1,11 @@
+// Check if screen size is tablet or smaller
+if (window.matchMedia("(max-width: 768px)").matches) {
+  // Perform your actions here
+  console.log("Screen is tablet-sized or smaller");
+} else if (window.matchMedia("min-width: 769px").matches) {
+  console.log("Screen is desktop");
+}
+
 const scrollToTopButton = document.getElementById("scroll-to-top");
 window.addEventListener("scroll", () => {
   if (window.pageYOffset > 0) {

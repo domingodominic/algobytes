@@ -143,6 +143,7 @@ html {
 [data-aos^="zoom"][data-aos^="zoom"].aos-animate {
   opacity: 0.5 !important;
 }
+@import "./contacts.scss";
 @import "./blogs.scss";
 @import "./carousels.scss";
 @import "./carousel.scss";

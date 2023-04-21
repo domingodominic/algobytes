@@ -134,6 +134,23 @@ html {
   opacity: 0.5 !important;
 }
 
+#contact {
+  background-color: #ececec;
+}
+#contact h2, #contact .h2, #contact .contactHead {
+  text-align: center;
+  font-family: poppins-black;
+  font-size: 40px;
+  color: #8ea1f7;
+  margin-top: 20px;
+}
+#contact .contactHead {
+  position: relative;
+  color: rgb(0, 0, 0);
+  font-size: 15px !important;
+  bottom: 35px !important;
+}
+
 .fact-techs {
   height: 70svh;
   background-color: #ececec;
@@ -364,7 +381,10 @@ body {
     bottom: 35px !important;
   }
   .msgUs-btn {
-    visibility: hidden;
+    position: static;
+    top: 15px;
+    right: 20px !important;
+    padding: 10px 20px !important;
   }
   nav {
     position: fixed;
@@ -514,7 +534,7 @@ input[type=checkbox] {
   width: 40px;
   height: 40px;
   cursor: pointer;
-  margin-left: 10px;
+  margin: 20px;
   z-index: 99;
   right: 0;
   flex-direction: column;
@@ -675,7 +695,7 @@ hr {
   opacity: 0.25;
 }
 
-h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, #contact .contactHead, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -691,11 +711,11 @@ h1, .h1 {
   }
 }
 
-h2, .h2 {
+h2, .h2, #contact .contactHead {
   font-size: calc(1.325rem + 0.9vw);
 }
 @media (min-width: 1200px) {
-  h2, .h2 {
+  h2, .h2, #contact .contactHead {
     font-size: 2rem;
   }
 }

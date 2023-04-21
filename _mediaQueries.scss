@@ -9,7 +9,10 @@
     }
   }
   .msgUs-btn {
-    visibility: hidden;
+    position: static;
+    top: 15px;
+    right: 20px !important;
+    padding: 10px 20px !important;
   }
   nav {
     position: fixed;
