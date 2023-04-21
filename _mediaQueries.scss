@@ -12,7 +12,6 @@
     position: static;
     top: 15px;
     right: 20px !important;
-    padding: 10px 20px !important;
   }
   nav {
     position: fixed;
@@ -80,24 +79,6 @@
       margin-top: 30px !important;
     }
   }
-  // .swiper-slide {
-  //   padding: 10px;
-  //   img {
-  //     width: 70%;
-  //     height: 100%;
-  //     margin-bottom: 100px;
-  //   }
-  // }
-
-  // .swiper-button-next {
-  //   right: 20px;
-  //   transform: rotate(90deg);
-  // }
-
-  // .swiper-button-prev {
-  //   left: 20px;
-  //   transform: rotate(90deg);
-  // }
 }
 
 //breakpoints
@@ -129,7 +110,7 @@
   }
   .contactHead {
     position: relative;
-    @extend h2;
+
     color: rgb(0, 0, 0);
     font-size: 10px !important;
     bottom: 40px !important;
@@ -137,7 +118,7 @@
 
   .msgUs-btn {
     font-size: 8px;
-    padding: 0px 25px 0px 25px;
+    border: none;
   }
   .logo img {
     width: 70%;

@@ -1,9 +1,20 @@
 // Check if screen size is tablet or smaller
+
+window.addEventListener("load", function () {
+  var loader = document.querySelector(".loader");
+  loader.classList.add("loader--hide");
+
+  var hiddenLoader = document.querySelector(".loader--hide");
+
+  // hiddenLoader.addEventListener("transitionend", function () {
+  //   document.body.removeChild(document.querySelector(".loader"));
+  // });
+});
 if (window.matchMedia("(max-width: 768px)").matches) {
-  // Perform your actions here
-  console.log("Screen is tablet-sized or smaller");
-} else if (window.matchMedia("min-width: 769px").matches) {
-  console.log("Screen is desktop");
+  var msgBtn = document.querySelector(".msgUs-btn");
+
+  msgBtn.innerHTML = `<i class="bi bi-chat" style="font-size: 30px; border: none; background-color: transparent"></i>`;
+  msgBtn.style.border = "none !important";
 }
 
 const scrollToTopButton = document.getElementById("scroll-to-top");

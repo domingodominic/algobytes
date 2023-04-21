@@ -24,6 +24,7 @@
   margin-bottom: 10px;
   height: auto;
   background: none;
+
   border: 1.5px solid #5271ff;
   border: 1px solid #5271ff;
   border-radius: 35px;
@@ -143,6 +144,8 @@ html {
 [data-aos^="zoom"][data-aos^="zoom"].aos-animate {
   opacity: 0.5 !important;
 }
+@import "./loader.scss";
+@import "./footer.scss";
 @import "./contacts.scss";
 @import "./blogs.scss";
 @import "./carousels.scss";

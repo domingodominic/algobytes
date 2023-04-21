@@ -134,6 +134,73 @@ html {
   opacity: 0.5 !important;
 }
 
+/* Discord loader made by: csozi | Website: www.csozi.hu*/
+.loader {
+  position: fixed;
+  top: 0;
+  height: 100svh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0c0037;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 1000;
+  transition: visibility 10s;
+}
+
+.loaders {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  box-sizing: content-box;
+  padding: 10px;
+}
+
+.square {
+  background-color: #7289da;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+}
+
+.square-1 {
+  animation: load 2s infinite;
+}
+
+.square-2 {
+  animation: load 2s infinite;
+  animation-delay: 1s;
+}
+
+@keyframes load {
+  0% {
+    translate: 0px 0px;
+    scale: 1;
+    rotate: 0deg;
+  }
+  25% {
+    translate: 40px 0px;
+    scale: 0.5;
+    rotate: -90deg;
+  }
+  50% {
+    translate: 40px 40px;
+    scale: 1;
+    rotate: 180deg;
+  }
+  75% {
+    translate: 0px 40px;
+    scale: 0.5;
+    rotate: 90deg;
+  }
+}
+.loader--hide {
+  transition: all 2s;
+  visibility: hidden;
+}
+
 #contact {
   background-color: #ececec;
 }
@@ -382,7 +449,6 @@ body {
     position: static;
     top: 15px;
     right: 20px !important;
-    padding: 10px 20px !important;
   }
   nav {
     position: fixed;
@@ -454,9 +520,22 @@ body {
   header nav ul li a {
     font-size: 8px;
   }
+  #contact h2, #contact .h2, #contact .contactHead {
+    text-align: center;
+    font-family: poppins-black;
+    font-size: 30px !important;
+    color: #8ea1f7;
+    margin-top: 20px;
+  }
+  .contactHead {
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-size: 10px !important;
+    bottom: 40px !important;
+  }
   .msgUs-btn {
     font-size: 8px;
-    padding: 0px 25px 0px 25px;
+    border: none;
   }
   .logo img {
     width: 70%;
@@ -532,7 +611,7 @@ input[type=checkbox] {
   width: 40px;
   height: 40px;
   cursor: pointer;
-  margin: 20px;
+  margin: 10px;
   z-index: 99;
   right: 0;
   flex-direction: column;
