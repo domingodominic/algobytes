@@ -1,4 +1,26 @@
-// Check if screen size is tablet or smaller
+// const section = document.querySelector(".about");
+// const sectionTop = section.offsetTop;
+// const sectionBottom = sectionTop + section.offsetHeight;
+// const windowHeight = window.innerHeight;
+// const myElement = document.querySelectorAll(".bars");
+
+// console.log(sectionTop, sectionBottom, windowHeight, myElement);
+
+// window.addEventListener("scroll", function () {
+//   const scrollPosition = window.scrollY;
+//   const sectionInView =
+//     scrollPosition + windowHeight >= sectionTop &&
+//     scrollPosition <= sectionBottom;
+
+//   console.log(scrollPosition, sectionInView);
+
+//   if (sectionInView) {
+//     myElement.style.backgroundColor = "red";
+//     console.log("hello");
+//   } else {
+//     myElement.style.backgroundColor = "green";
+//   }
+// });
 
 window.addEventListener("load", function () {
   var loader = document.querySelector(".loader");
@@ -13,10 +35,17 @@ window.addEventListener("load", function () {
 });
 if (window.matchMedia("(max-width: 768px)").matches) {
   var msgBtn = document.querySelector(".msgUs-btn");
-
+  const navlist = document.querySelector(".nav-list");
   msgBtn.innerHTML = ` <a href="mailto:algofilipinoofficers@gmail.com">   <i class="bi bi-chat" style="font-size: 30px; border: none; background-color: transparent"></i>  </a>`;
   msgBtn.style.border = "none !important";
 }
+
+// const switchToggle = document.querySelector("#checkbox");
+// switchToggle.addEventListener("click", function () {
+//   window.addEventListener("click", function (event) {
+//     switchToggle.checked = false;
+//   });
+// });
 
 const scrollToTopButton = document.getElementById("scroll-to-top");
 window.addEventListener("scroll", () => {
@@ -27,7 +56,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Add click event listener to the scroll-to-top button
 scrollToTopButton.addEventListener("click", () => {
   window.scrollTo({
     top: 0,

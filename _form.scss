@@ -1,4 +1,11 @@
 //dinagdag
+
+// .form {
+//   display: block;
+// }
+.containers {
+  padding: 30px;
+}
 .singup {
   color: #5271ff;
   text-transform: uppercase;
@@ -17,7 +24,8 @@
   width: 100%;
   flex-direction: column;
   gap: 35px;
-
+  box-shadow: 8px 8px 16px #bebebe, -8px -8px 16px #ffffff;
+  border: none;
   padding: 50px;
   border-radius: 8px;
 }

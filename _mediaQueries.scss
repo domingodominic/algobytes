@@ -58,6 +58,7 @@
   .toggle {
     position: fixed !important;
     display: flex !important;
+    right: 17px !important;
   }
   #checkbox:checked + .toggle ~ header .myNav {
     right: 0% !important;
