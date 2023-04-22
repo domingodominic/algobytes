@@ -204,6 +204,16 @@ html {
   visibility: hidden;
 }
 
+.other--contacts {
+  text-align: center;
+}
+.other--contacts .col-md-4 {
+  margin-bottom: 50px;
+}
+.other--contacts i {
+  font-size: 40px;
+  color: #5271ff;
+}
 #contact h2, #contact .h2, #contact .contactHead {
   text-align: center;
   font-family: poppins-black;
@@ -284,6 +294,7 @@ body {
 
 .containers {
   padding: 30px;
+  height: 100%;
 }
 
 .singup {
@@ -566,6 +577,12 @@ body {
     text-align: start;
     font-weight: 600;
     line-height: 3rem;
+  }
+}
+@media (min-width: 1200px) {
+  .inputBox,
+  .inputBox1 {
+    width: 350px !important;
   }
 }
 header {

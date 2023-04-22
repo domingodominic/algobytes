@@ -142,3 +142,10 @@
     }
   }
 }
+
+@media (min-width: 1200px) {
+  .inputBox,
+  .inputBox1 {
+    width: 350px !important;
+  }
+}

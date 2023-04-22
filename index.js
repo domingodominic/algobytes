@@ -1,27 +1,3 @@
-// const section = document.querySelector(".about");
-// const sectionTop = section.offsetTop;
-// const sectionBottom = sectionTop + section.offsetHeight;
-// const windowHeight = window.innerHeight;
-// const myElement = document.querySelectorAll(".bars");
-
-// console.log(sectionTop, sectionBottom, windowHeight, myElement);
-
-// window.addEventListener("scroll", function () {
-//   const scrollPosition = window.scrollY;
-//   const sectionInView =
-//     scrollPosition + windowHeight >= sectionTop &&
-//     scrollPosition <= sectionBottom;
-
-//   console.log(scrollPosition, sectionInView);
-
-//   if (sectionInView) {
-//     myElement.style.backgroundColor = "red";
-//     console.log("hello");
-//   } else {
-//     myElement.style.backgroundColor = "green";
-//   }
-// });
-
 window.addEventListener("load", function () {
   var loader = document.querySelector(".loader");
   loader.classList.add("loader--hide");
