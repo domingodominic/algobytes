@@ -6,14 +6,15 @@ window.addEventListener("load", function () {
 
   var hiddenLoader = document.querySelector(".loader--hide");
 
-  // hiddenLoader.addEventListener("transitionend", function () {
-  //   document.body.removeChild(document.querySelector(".loader"));
-  // });
+  hiddenLoader.addEventListener("transitionend", function () {
+    document.body.removeChild(document.querySelector(".loader"));
+    window.scrollY;
+  });
 });
 if (window.matchMedia("(max-width: 768px)").matches) {
   var msgBtn = document.querySelector(".msgUs-btn");
 
-  msgBtn.innerHTML = `<i class="bi bi-chat" style="font-size: 30px; border: none; background-color: transparent"></i>`;
+  msgBtn.innerHTML = ` <a href="mailto:algofilipinoofficers@gmail.com">   <i class="bi bi-chat" style="font-size: 30px; border: none; background-color: transparent"></i>  </a>`;
   msgBtn.style.border = "none !important";
 }
 
