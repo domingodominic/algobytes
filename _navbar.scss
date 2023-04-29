@@ -9,7 +9,7 @@ header {
     z-index: 99;
     ul {
       display: flex;
-      margin-top: 10px;
+      margin-top: 20px;
 
       li {
         list-style: none;
@@ -18,9 +18,9 @@ header {
           position: relative;
           text-decoration: none;
           margin-left: 40px;
-          font-size: 10px;
+          font-size: 12px;
           font-weight: bolder;
-          color: black;
+          color: #5271ff;
 
           &::after {
             content: "";

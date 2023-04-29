@@ -19,25 +19,53 @@
 }
 
 .msgUs-btn {
-  position: relative;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  height: auto;
-  background: none;
-
-  border: 1.5px solid #5271ff;
-  border: 1px solid #5271ff;
-  border-radius: 35px;
-  padding: 0px 25px 0px 25px;
+  padding: 5px 5px;
+  border: none;
+  border-radius: 50px;
   font-weight: bold;
-  font-size: 10px;
   color: #5271ff;
+  transition: all 1000ms;
+  font-size: 9px;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  outline: 1.5px solid #5271ff;
+  width: 100px;
+  height: 40px;
+  margin-top: 20px;
+
+  &:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 1px solid #5271ff;
+    box-shadow: 4px 5px 17px -4px #5271ff;
+  }
+  &:hover a {
+    color: white;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #5271ff;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  &:hover::before {
+    width: 250%;
+  }
   a {
     text-decoration: none;
+
+    &:hover {
+      color: white;
+    }
   }
 }
-
-//home section
 
 .home-section {
   .col-img {
@@ -51,7 +79,8 @@
   }
 }
 .home-col-1 {
-  padding: 3rem;
+  padding: 3rem !important;
+
   p {
     font-weight: lighter;
   }
@@ -147,12 +176,12 @@ html {
 [data-aos^="zoom"][data-aos^="zoom"].aos-animate {
   opacity: 0.5 !important;
 }
+@import "./videos.scss";
 @import "./loader.scss";
 @import "./footer.scss";
 @import "./contacts.scss";
 @import "./blogs.scss";
 @import "./carousels.scss";
-@import "./carousel.scss";
 @import "./form.scss";
 @import "./mediaQueries.scss";
 @import "./navbar.scss";

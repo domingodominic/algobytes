@@ -9,17 +9,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aos": "^2.3.4",
     "bootstrap": "^5.2.3",
     "bootstrap-icons": "^1.10.4"
   },
   "description": "",
+  "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/domingodominic/algobytes.git"
+    "url": "git+https://github.com/Algo-Filipino/AlgoBytesWebsite.git"
   },
   "bugs": {
-    "url": "https://github.com/domingodominic/algobytes/issues"
+    "url": "https://github.com/Algo-Filipino/AlgoBytesWebsite/issues"
   },
-  "homepage": "https://github.com/domingodominic/algobytes#readme"
+  "homepage": "https://github.com/Algo-Filipino/AlgoBytesWebsite#readme"
 }

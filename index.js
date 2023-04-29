@@ -40,3 +40,37 @@ scrollToTopButton.addEventListener("click", () => {
 });
 
 AOS.init();
+
+const lists = document.querySelector(".lists");
+const video = document.querySelector(".myVid");
+const list = lists.children;
+
+list.item(0).addEventListener("click", function () {
+  video.src = "Leadership.mp4";
+});
+var popoverTriggerList = [].slice.call(
+  document.querySelectorAll('[data-bs-toggle="popover"]')
+);
+list.item(1).addEventListener("click", function () {
+  video.src = "gdw.mkv";
+});
+var popoverTriggerList = [].slice.call(
+  document.querySelectorAll('[data-bs-toggle="popover"]')
+);
+
+list.item(2).addEventListener("click", function () {
+  video.src = "OSC.mov";
+});
+var popoverTriggerList = [].slice.call(
+  document.querySelectorAll('[data-bs-toggle="popover"]')
+);
+list.item(3).addEventListener("click", function () {
+  video.src = "WMW.mp4";
+});
+var popoverTriggerList = [].slice.call(
+  document.querySelectorAll('[data-bs-toggle="popover"]')
+);
+
+var popoverList = popoverTriggerList.map(function (popoverTrigger) {
+  return new bootstrap.Popover(popoverTrigger);
+});
